@@ -1,6 +1,6 @@
 {
-    "name": "flutter_package_template_example",
-    "short_name": "flutter_package_template_example",
+    "name": "cross_platform_example",
+    "short_name": "cross_platform_example",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",

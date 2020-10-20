@@ -1,5 +1,5 @@
 # Changelog
 
-## [1.0.0]
+## 1.0.0 - 20.10.2020
 
-* Add changes here
+* Implemented cross platform functionality.

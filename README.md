@@ -1,20 +1,22 @@
-# flutter_package_template
+# cross_platform
 
-![Build](https://github.com/marchdev-tk/flutter_package_template/workflows/build/badge.svg)
-[![Pub](https://img.shields.io/pub/v/flutter_package_template.svg)](https://pub.dartlang.org/packages/flutter_package_template)
-![GitHub](https://img.shields.io/github/license/marchdev-tk/flutter_package_template)
-![GitHub stars](https://img.shields.io/github/stars/marchdev-tk/flutter_package_template?style=social)
+![Build](https://github.com/marchdev-tk/cross_platform/workflows/build/badge.svg)
+[![Pub](https://img.shields.io/pub/v/flutter_package_template.svg)](https://pub.dartlang.org/packages/cross_platform)
+![GitHub](https://img.shields.io/github/license/marchdev-tk/cross_platform)
+![GitHub stars](https://img.shields.io/github/stars/marchdev-tk/cross_platform?style=social)
 
-Package description
+Cross platform package that unifies the work with Platform and wrapps dart:io Platform and dart:html to determine platform of the host machine.
 
 ## Getting Started
 
-Add intro here
+ * `Platform.isWeb` - gets whether host platform is web based or not.
 
-## Examples
+ * `Platform.isAndroid` - gets whether this app is running on Android or not.
 
-Add examples here
+ * `Platform.isIOS` - gets whether this app is running on iOS or not.
+
+ * `Platform.isMobile` - gets whether this app is running on iOS/Android or not.
 
 ## Feature requests and Bug reports
 
-Feel free to post a feature requests or report a bug [here](https://github.com/marchdev-tk/flutter_package_template/issues).
+Feel free to post a feature requests or report a bug [here](https://github.com/marchdev-tk/cross_platform/issues).

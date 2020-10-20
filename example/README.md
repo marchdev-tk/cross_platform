@@ -1,11 +1,22 @@
-# flutter_package_template_example
+# cross_platform_example
 
-Demonstrates how to use the flutter_package_template package.
+Demonstrates how to use the cross_platform package.
 
 ## Usage
 
 ```dart
-// TODO: Add example code here
+// Is true if the application was compiled to run on the web.
+Platform.isWeb;
+```
+
+```dart
+// Whether the operating system is a version of Android.
+Platform.isAndroid;
+```
+
+```dart
+// Whether the operating system is a version of iOS.
+Platform.isIOS;
 ```
 
 ## Getting Started

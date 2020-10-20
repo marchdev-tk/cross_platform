@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_package_template/flutter_package_template.dart';
+import 'package:cross_platform/cross_platform.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'flutter_package_template Demo',
+      title: 'cross_platform Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -31,6 +31,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: create example
+    if (Platform.isWeb) {
+      return Center(child: Text('Current platform is Web'));
+    } else if (Platform.isAndroid) {
+      return Center(child: Text('Current platform is Android'));
+    } else if (Platform.isIOS) {
+      return Center(child: Text('Current platform is iOS'));
+    } else {
+      return Center(child: Text('Current platform is undefined'));
+    }
   }
 }
