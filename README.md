@@ -1,7 +1,7 @@
 # cross_platform
 
 ![Build](https://github.com/marchdev-tk/cross_platform/workflows/build/badge.svg)
-[![Pub](https://img.shields.io/pub/v/flutter_package_template.svg)](https://pub.dev/packages/cross_platform)
+[![Pub](https://img.shields.io/pub/v/cross_platform.svg)](https://pub.dev/packages/cross_platform)
 ![GitHub](https://img.shields.io/github/license/marchdev-tk/cross_platform)
 ![GitHub stars](https://img.shields.io/github/stars/marchdev-tk/cross_platform?style=social)
 
