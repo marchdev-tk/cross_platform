@@ -4,18 +4,18 @@ homepage: https://github.com/marchdev-tk/cross_platform
 description: Cross platform package that unifies the work with Platform and wrapps dart:io Platform and dart:html to determine platform of the host machine.
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  universal_html: ^1.2.3
+  universal_html: ^1.2.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  pedantic: ^1.8.0
+  pedantic: ^1.11.0
 
 flutter:
   uses-material-design: true
