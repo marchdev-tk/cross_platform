@@ -17,4 +17,16 @@ class Platform extends PlatformInterface {
 
   @override
   bool get isIOS => throw UnimplementedError();
+
+  @override
+  bool get isLinux => throw UnimplementedError();
+
+  @override
+  bool get isMacOS => throw UnimplementedError();
+
+  @override
+  bool get isWindows => throw UnimplementedError();
+
+  @override
+  bool get isFuchsia => throw UnimplementedError();
 }

@@ -2,8 +2,9 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'dart:html' as html;
+
 import 'package:flutter/foundation.dart';
-import 'package:universal_html/html.dart' as html hide Text;
 
 import 'platform.interface.dart';
 
@@ -23,4 +24,22 @@ class Platform extends PlatformInterface {
   bool get isIOS => html.window.navigator.userAgent
       .toLowerCase()
       .contains(RegExp('iphone|ipad|ipod'));
+
+  @override
+  bool get isLinux =>
+      html.window.navigator.platform.toLowerCase().contains(RegExp('linux'));
+
+  @override
+  bool get isMacOS => html.window.navigator.platform
+      .toLowerCase()
+      .contains(RegExp('macintosh|macintel|macppc|mac68k|darwin|mac'));
+
+  @override
+  bool get isWindows => html.window.navigator.platform
+      .toLowerCase()
+      .contains(RegExp('win32|win64|windows|wince'));
+
+  @override
+  bool get isFuchsia =>
+      html.window.navigator.platform.toLowerCase().contains(RegExp('fuchsia'));
 }

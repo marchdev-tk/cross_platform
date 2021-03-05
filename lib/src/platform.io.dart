@@ -21,4 +21,16 @@ class Platform extends PlatformInterface {
 
   @override
   bool get isIOS => io.Platform.isIOS;
+
+  @override
+  bool get isLinux => io.Platform.isLinux;
+
+  @override
+  bool get isMacOS => io.Platform.isMacOS;
+
+  @override
+  bool get isWindows => io.Platform.isWindows;
+
+  @override
+  bool get isFuchsia => io.Platform.isFuchsia;
 }

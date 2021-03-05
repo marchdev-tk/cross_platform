@@ -17,4 +17,24 @@ abstract class PlatformInterface {
   /// Whether the operating system is a version of
   /// [Android](https://en.wikipedia.org/wiki/Android_%28operating_system%29).
   bool get isAndroid;
+
+  /// Whether the operating system is a version of
+  /// [Linux](https://en.wikipedia.org/wiki/Linux).
+  ///
+  /// This value is `false` if the operating system is a specialized
+  /// version of Linux that identifies itself by a different name,
+  /// for example Android (see [isAndroid]).
+  bool get isLinux;
+
+  /// Whether the operating system is a version of
+  /// [macOS](https://en.wikipedia.org/wiki/MacOS).
+  bool get isMacOS;
+
+  /// Whether the operating system is a version of
+  /// [Microsoft Windows](https://en.wikipedia.org/wiki/Microsoft_Windows).
+  bool get isWindows;
+
+  /// Whether the operating system is a version of
+  /// [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia).
+  bool get isFuchsia;
 }

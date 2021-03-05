@@ -25,4 +25,27 @@ class Platform {
 
   /// Whether the operating system is a version of Android or iOS.
   static bool get isMobile => isIOS || isAndroid;
+
+  /// Whether the operating system is a version of
+  /// [Linux](https://en.wikipedia.org/wiki/Linux).
+  ///
+  /// This value is `false` if the operating system is a specialized
+  /// version of Linux that identifies itself by a different name,
+  /// for example Android (see [isAndroid]).
+  static bool get isLinux => _platform.isLinux;
+
+  /// Whether the operating system is a version of
+  /// [macOS](https://en.wikipedia.org/wiki/MacOS).
+  static bool get isMacOS => _platform.isMacOS;
+
+  /// Whether the operating system is a version of
+  /// [Microsoft Windows](https://en.wikipedia.org/wiki/Microsoft_Windows).
+  static bool get isWindows => _platform.isWindows;
+
+  /// Whether the operating system is a version of Linux, MacOS or Windows.
+  static bool get isDesktop => isLinux || isMacOS || isWindows;
+
+  /// Whether the operating system is a version of
+  /// [Fuchsia](https://en.wikipedia.org/wiki/Google_Fuchsia).
+  static bool get isFuchsia => _platform.isFuchsia;
 }
