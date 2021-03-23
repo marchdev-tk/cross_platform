@@ -19,8 +19,32 @@ Platform.isAndroid;
 Platform.isIOS;
 ```
 
-## Getting Started
+```dart
+// Whether the operating system is a version of iOS or Android.
+Platform.isMobile;
+```
 
-For help getting started with Flutter, view
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+// Whether the operating system is a version of MacOS.
+Platform.isMacOS;
+```
+
+```dart
+// Whether the operating system is a version of Linux.
+Platform.isLinux;
+```
+
+```dart
+// Whether the operating system is a version of Windows.
+Platform.isWindows;
+```
+
+```dart
+// Whether the operating system is a version of MacOS, Linux or Windows.
+Platform.isDesktop;
+```
+
+```dart
+// Whether the operating system is a version of Fuchsia.
+Platform.isFuchsia;
+```

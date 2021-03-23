@@ -17,6 +17,16 @@ Cross platform package that unifies the work with Platform and wrapps dart:io Pl
 
  * `Platform.isMobile` - gets whether this app is running on iOS/Android or not.
 
+ * `Platform.isMacOS` - gets whether this app is running on MacOS or not.
+
+ * `Platform.isLinux` - gets whether this app is running on Linux or not.
+
+ * `Platform.isWindows` - gets whether this app is running on Windows or not.
+
+ * `Platform.isDesktop` - gets whether this app is running on MacOS/Linux/Windows or not.
+
+ * `Platform.isFuchsia` - gets whether this app is running on Fuchsia or not.
+
 ## Feature requests and Bug reports
 
 Feel free to post a feature requests or report a bug [here](https://github.com/marchdev-tk/cross_platform/issues).

@@ -1,9 +1,10 @@
 # Changelog
 
-## 1.1.0 - 05.03.2021
+## 2.0.0 - 23.03.2021
 
+* Upgraded to NNBD
 * Added `isLinux`, `isMacOS`, `isWindows`, `isDesktop`, `isFuchsia` getters
-* Removed `unversal_html` dependency
+* Removed `universal_html` dependency
 
 ## 1.0.0 - 20.10.2020
 

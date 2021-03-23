@@ -29,16 +29,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
+  Widget _buildContent() {
     if (Platform.isWeb) {
       return Center(child: Text('Current platform is Web'));
     } else if (Platform.isAndroid) {
       return Center(child: Text('Current platform is Android'));
     } else if (Platform.isIOS) {
       return Center(child: Text('Current platform is iOS'));
+    } else if (Platform.isMacOS) {
+      return Center(child: Text('Current platform is MacOS'));
+    } else if (Platform.isLinux) {
+      return Center(child: Text('Current platform is Linux'));
+    } else if (Platform.isWindows) {
+      return Center(child: Text('Current platform is Windows'));
+    } else if (Platform.isFuchsia) {
+      return Center(child: Text('Current platform is Fuchsia'));
     } else {
       return Center(child: Text('Current platform is undefined'));
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _buildContent(),
+    );
   }
 }

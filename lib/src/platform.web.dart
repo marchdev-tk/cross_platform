@@ -27,19 +27,27 @@ class Platform extends PlatformInterface {
 
   @override
   bool get isLinux =>
-      html.window.navigator.platform.toLowerCase().contains(RegExp('linux'));
+      html.window.navigator.platform?.toLowerCase().contains(RegExp('linux')) ??
+      false;
 
   @override
-  bool get isMacOS => html.window.navigator.platform
-      .toLowerCase()
-      .contains(RegExp('macintosh|macintel|macppc|mac68k|darwin|mac'));
+  bool get isMacOS =>
+      html.window.navigator.platform
+          ?.toLowerCase()
+          .contains(RegExp('macintosh|macintel|macppc|mac68k|darwin|mac')) ??
+      false;
 
   @override
-  bool get isWindows => html.window.navigator.platform
-      .toLowerCase()
-      .contains(RegExp('win32|win64|windows|wince'));
+  bool get isWindows =>
+      html.window.navigator.platform
+          ?.toLowerCase()
+          .contains(RegExp('win32|win64|windows|wince')) ??
+      false;
 
   @override
   bool get isFuchsia =>
-      html.window.navigator.platform.toLowerCase().contains(RegExp('fuchsia'));
+      html.window.navigator.platform
+          ?.toLowerCase()
+          .contains(RegExp('fuchsia')) ??
+      false;
 }
