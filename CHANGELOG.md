@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.0.0 - 27.04.2021
+
+* Implemented for io:
+  * `numberOfProcessors`
+  * `pathSeparator`
+  * `localeName`
+  * `operatingSystem`
+  * `operatingSystemVersion`
+  * `localHostname`
+  * `environment`
+  * `executable`
+  * `resolvedExecutable`
+  * `script`
+  * `executableArguments`
+  * `packageConfig`
+  * `version`
+* Implemented for web:
+  * `numberOfProcessors`
+  * `pathSeparator`
+  * `localeName`
+  * `operatingSystem`
+  * `operatingSystemVersion`
+
 ## 2.0.0 - 23.03.2021
 
 * Upgraded to NNBD
