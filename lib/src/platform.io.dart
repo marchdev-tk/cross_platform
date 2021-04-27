@@ -33,4 +33,43 @@ class Platform extends PlatformInterface {
 
   @override
   bool get isFuchsia => io.Platform.isFuchsia;
+
+  @override
+  int get numberOfProcessors => io.Platform.numberOfProcessors;
+
+  @override
+  String get pathSeparator => io.Platform.pathSeparator;
+
+  @override
+  String get localeName => io.Platform.localeName;
+
+  @override
+  String get operatingSystem => io.Platform.operatingSystem;
+
+  @override
+  String get operatingSystemVersion => io.Platform.operatingSystemVersion;
+
+  @override
+  String get localHostname => io.Platform.localHostname;
+
+  @override
+  Map<String, String> get environment => io.Platform.environment;
+
+  @override
+  String get executable => io.Platform.executable;
+
+  @override
+  String get resolvedExecutable => io.Platform.resolvedExecutable;
+
+  @override
+  Uri get script => io.Platform.script;
+
+  @override
+  List<String> get executableArguments => io.Platform.executableArguments;
+
+  @override
+  String? get packageConfig => io.Platform.packageConfig;
+
+  @override
+  String get version => io.Platform.version;
 }
