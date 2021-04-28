@@ -55,7 +55,7 @@ class Platform {
   static bool get isFuchsia => _platform.isFuchsia;
 
   /// The number of individual execution units of the machine.
-  /// 
+  ///
   /// **Note**: on `web` platform could return [unknownNumberOfPrecessors].
   static int get numberOfProcessors => _platform.numberOfProcessors;
 
@@ -73,7 +73,7 @@ class Platform {
   static String get localeName => _platform.localeName;
 
   /// A string representing the operating system or platform.
-  /// 
+  ///
   /// **Note**: on `web` platform could return [unknownOperatingSystem].
   static String get operatingSystem => _platform.operatingSystem;
 
@@ -84,7 +84,7 @@ class Platform {
   static const unknownOperatingSystem = 'unknown os';
 
   /// A string representing the version of the operating system or platform.
-  /// 
+  ///
   /// **Note**: on `web` platform could return [unknownOperatingSystemVersion].
   static String get operatingSystemVersion => _platform.operatingSystemVersion;
 

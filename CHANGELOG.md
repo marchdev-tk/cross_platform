@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1 - 28.04.2021
+
+* Fixed lint issues
+
 ## 3.0.0 - 27.04.2021
 
 * Implemented for io:
