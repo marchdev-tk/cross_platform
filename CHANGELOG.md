@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.0 - 27.02.2026
+
+* Updated deps to latest
+* Updated example
+
 ## 3.0.1 - 28.04.2021
 
 * Fixed lint issues
