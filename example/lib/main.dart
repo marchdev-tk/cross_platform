@@ -7,10 +7,12 @@ import 'package:cross_platform/cross_platform.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,12 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -31,21 +35,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Widget _buildContent() {
     if (Platform.isWeb) {
-      return Center(child: Text('Current platform is Web'));
+      return const Center(child: Text('Current platform is Web'));
     } else if (Platform.isAndroid) {
-      return Center(child: Text('Current platform is Android'));
+      return const Center(child: Text('Current platform is Android'));
     } else if (Platform.isIOS) {
-      return Center(child: Text('Current platform is iOS'));
+      return const Center(child: Text('Current platform is iOS'));
     } else if (Platform.isMacOS) {
-      return Center(child: Text('Current platform is MacOS'));
+      return const Center(child: Text('Current platform is MacOS'));
     } else if (Platform.isLinux) {
-      return Center(child: Text('Current platform is Linux'));
+      return const Center(child: Text('Current platform is Linux'));
     } else if (Platform.isWindows) {
-      return Center(child: Text('Current platform is Windows'));
+      return const Center(child: Text('Current platform is Windows'));
     } else if (Platform.isFuchsia) {
-      return Center(child: Text('Current platform is Fuchsia'));
+      return const Center(child: Text('Current platform is Fuchsia'));
     } else {
-      return Center(child: Text('Current platform is undefined'));
+      return const Center(child: Text('Current platform is undefined'));
     }
   }
 

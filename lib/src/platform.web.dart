@@ -2,9 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'dart:html' as html;
-
 import 'package:flutter/foundation.dart';
+import 'package:web/web.dart' as web;
 
 import 'platform.interface.dart';
 import '../cross_platform.dart' as cp;
@@ -19,44 +18,32 @@ class Platform extends PlatformInterface {
 
   @override
   bool get isAndroid =>
-      html.window.navigator.userAgent.toLowerCase().contains(RegExp('android'));
+      web.window.navigator.userAgent.toLowerCase().contains(RegExp('android'));
 
   @override
-  bool get isIOS => html.window.navigator.userAgent
+  bool get isIOS => web.window.navigator.userAgent
       .toLowerCase()
       .contains(RegExp('iphone|ipad|ipod'));
 
   @override
   bool get isLinux =>
-      html.window.navigator.platform
-          ?.toLowerCase()
-          .contains(RegExp('linux|x11')) ??
-      false;
+      web.window.navigator.platform.toLowerCase().contains(RegExp('linux|x11'));
 
   @override
-  bool get isMacOS =>
-      html.window.navigator.platform?.toLowerCase().contains(
-          RegExp('macintosh|macintel|macppc|mac68k|mac_powerpc|darwin|mac')) ??
-      false;
+  bool get isMacOS => web.window.navigator.platform.toLowerCase().contains(
+      RegExp('macintosh|macintel|macppc|mac68k|mac_powerpc|darwin|mac'));
 
   @override
-  bool get isWindows =>
-      html.window.navigator.platform
-          ?.toLowerCase()
-          .contains(RegExp('win16|win32|win64|windows|wince')) ??
-      false;
+  bool get isWindows => web.window.navigator.platform
+      .toLowerCase()
+      .contains(RegExp('win16|win32|win64|windows|wince'));
 
   @override
   bool get isFuchsia =>
-      html.window.navigator.platform
-          ?.toLowerCase()
-          .contains(RegExp('fuchsia')) ??
-      false;
+      web.window.navigator.platform.toLowerCase().contains(RegExp('fuchsia'));
 
   @override
-  int get numberOfProcessors =>
-      html.window.navigator.hardwareConcurrency ??
-      cp.Platform.unknownNumberOfPrecessors;
+  int get numberOfProcessors => web.window.navigator.hardwareConcurrency;
 
   @override
   String get pathSeparator {
@@ -70,7 +57,7 @@ class Platform extends PlatformInterface {
   }
 
   @override
-  String get localeName => html.window.navigator.language;
+  String get localeName => web.window.navigator.language;
 
   @override
   String get operatingSystem {
@@ -112,12 +99,13 @@ class Platform extends PlatformInterface {
         'Windows 7': RegExp('(Windows 7|Windows NT 6.1)'),
         'Windows 8': RegExp('(Windows 8|Windows NT 6.2)'),
         'Windows 8.1': RegExp('(Windows 8.1|Windows NT 6.3)'),
-        'Windows 10': RegExp('(Windows 10.0|Windows NT 10.0)'),
+        'Windows 10': RegExp('Windows 10.0'),
+        'Windows 10/11': RegExp('Windows NT 10.0'),
       };
 
       String? os;
       for (final item in winVersions.entries) {
-        final hasMatch = item.value.hasMatch(html.window.navigator.userAgent);
+        final hasMatch = item.value.hasMatch(web.window.navigator.userAgent);
         if (hasMatch) {
           os = item.key;
           break;
@@ -128,8 +116,8 @@ class Platform extends PlatformInterface {
         version = RegExp('Windows (.*)').firstMatch(os)?.group(1);
       }
     } else if (isIOS) {
-      version = RegExp('OS (\d+)_(\d+)_?(\d+)?')
-          .firstMatch(html.window.navigator.appVersion)
+      version = RegExp(r'OS (\d+)_(\d+)_?(\d+)?')
+          .firstMatch(web.window.navigator.appVersion)
           ?.group(0);
 
       if (version != null) {
@@ -138,8 +126,8 @@ class Platform extends PlatformInterface {
       }
     } else if (isAndroid || isMacOS) {
       version = RegExp(
-              '(?:Android|Mac OS|Mac OS X|MacPPC|MacIntel|Mac_PowerPC|Macintosh) ([\.\_\d]+)')
-          .firstMatch(html.window.navigator.userAgent)
+              r'(?:Android|Mac OS|Mac OS X|MacPPC|MacIntel|Mac_PowerPC|Macintosh) ([\.\_\d]+)')
+          .firstMatch(web.window.navigator.userAgent)
           ?.group(1);
     }
 
